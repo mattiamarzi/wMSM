@@ -1,0 +1,70 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wmsm"
+version = "0.1.0"
+description = "wMSM, weighted MultiScale Model for multiscale network reconstruction"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "Mattia Marzi", email = "mattia.marzi@imtlucca.it" }]
+dependencies = [
+  "numpy>=1.23",
+  "pandas>=2.0",
+  "numba>=0.57",
+]
+keywords = ["networks", "reconstruction", "gravity-model", "coarse-graining", "weighted-networks"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Information Analysis",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7",
+  "pytest-cov>=4",
+  "ruff>=0.5",
+  "black>=24.0",
+  "build>=1.2",
+  "twine>=5",
+]
+notebooks = [
+  "jupyter>=1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/mattiamarzi/wmsm"
+Repository = "https://github.com/mattiamarzi/wmsm"
+Issues = "https://github.com/mattiamarzi/wmsm/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+license-files = ["LICENSE"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+wmsm = ["data/*.npz", "data/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+extend-exclude = ["notebooks"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]
+ignore = ["E501"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]

@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use wMSM, please cite the accompanying paper. This citation file contains placeholders until the manuscript is public."
+title: "wMSM: weighted MultiScale Model"
+authors:
+  - family-names: Marzi
+    given-names: Mattia
+  - family-names: Pijpers
+    given-names: Frank
+  - family-names: Garlaschelli
+    given-names: Diego
+version: 0.1.0
+date-released: 2026-XX-XX
+repository-code: "https://github.com/mattiamarzi/wmsm"
+url: "https://github.com/mattiamarzi/wmsm"
+preferred-citation:
+  type: article
+  title: "Inferring Weighted Networks Across Scales from Coarse-Grained Data"
+  authors:
+    - family-names: Marzi
+      given-names: Mattia
+    - family-names: Pijpers
+      given-names: Frank
+    - family-names: Garlaschelli
+      given-names: Diego
+  year: 2026
+  journal: "TBD"
+  doi: "TBD"

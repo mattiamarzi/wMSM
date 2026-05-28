@@ -1,0 +1,24 @@
+{
+  "name": "synthetic_itn_like",
+  "description": "Anonymized ITN-like undirected weighted network with a macro-regional partition.",
+  "source": "Synthetic data generated from a multiscale topology and gravity-like positive weights. It is not a redistributed empirical dataset.",
+  "n_countries": 36,
+  "n_macro_regions": 12,
+  "macro_sizes": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+  ],
+  "country_self_loops": false,
+  "macro_self_loops": true,
+  "file": "synthetic_itn_like.npz"
+}
